@@ -9,7 +9,7 @@ import project.board.domain.User;
 @Getter
 public class UserSignUpRequest {
     @Pattern(regexp = "^(?=.*[a-z])(?=.*\\d)[a-z\\d]{5,15}$", message = "아이디는 5자 이상 15자 이하이며 영문소문자와 숫자를 반드시 포함해야합니다.")
-    private String name;
+    private String userId;
 
     // TODO: @Email VS @Pattern 직접 작성 차이는 어떻게 되는가?
 //    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "이메일 형식이 올바르지 않습니다")
@@ -22,7 +22,7 @@ public class UserSignUpRequest {
 
     public  User toEntity() {
         return User.builder()
-                .name(this.name)
+                .userId(this.userId)
                 .email(this.email)
                 .nickname(this.nickname)
                 .password(this.password)

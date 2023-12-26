@@ -46,7 +46,7 @@ public class UserController {
         }
         User user = userService.signIn(dto);
         if (user != null) {
-            model.addAttribute("user", user.getName());
+            model.addAttribute("user", user.getUserId());
             return "redirect:/";
         }
         //TODO : Exception이 Service Layer에서 나온다 해도 아래 코드는 유의미한가?

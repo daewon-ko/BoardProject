@@ -12,8 +12,8 @@ import project.board.util.BaseTimeEntity;
 public class User extends BaseTimeEntity {
     @Id
     private Long id;
-    @Column(name = "name", unique = true)
-    private String name;
+    @Column(name = "userId", unique = true)
+    private String userId;
     @Column(name = "email")
     private String email;
     @Column(name = "nickname", unique = true)
