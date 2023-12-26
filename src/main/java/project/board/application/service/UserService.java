@@ -13,7 +13,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     @Transactional
-    public User save(final UserSignUpRequest dto) {
+    public User createUser(final UserSignUpRequest dto) {
         User entity = dto.toEntity();
         return userRepository.save(entity);
     }
