@@ -1,10 +1,7 @@
 package project.board.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import project.board.util.BaseTimeEntity;
 
 @Entity
@@ -14,7 +11,7 @@ import project.board.util.BaseTimeEntity;
 @Getter
 public class User extends BaseTimeEntity {
     @Id
-    private long id;
+    private Long id;
     @Column(name = "name", unique = true)
     private String name;
     @Column(name = "email")
