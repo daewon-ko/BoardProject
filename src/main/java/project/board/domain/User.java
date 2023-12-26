@@ -23,5 +23,9 @@ public class User extends BaseTimeEntity {
     @Lob
     private String profileImage;
 
+    public boolean checkPassword(String password) {
+        return this.password.equals(password);
+    }
+
 
 }
