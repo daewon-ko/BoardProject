@@ -9,4 +9,5 @@ import project.board.application.service.UserService;
 public class UserController {
     private final UserService userService;
 
+
 }
