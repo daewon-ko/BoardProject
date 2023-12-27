@@ -3,6 +3,8 @@ package project.board.application.controller.user.request;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 
+import java.io.Serializable;
+
 @Getter
 public class UserSignInRequest {
 

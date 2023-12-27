@@ -10,7 +10,7 @@ import project.board.util.BaseTimeEntity;
 @AllArgsConstructor
 @Getter
 public class User extends BaseTimeEntity {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "userId", unique = true)
     private String userId;
